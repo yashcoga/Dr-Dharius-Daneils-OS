@@ -1,0 +1,609 @@
+<!doctype html>
+<html lang="en" data-look="cos">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Upside Down Relationships · Free Masterclass with Dr. Dharius Daniels</title>
+<meta name="description" content="A free live masterclass with Dr. Dharius Daniels, author of Relational Intelligence. Tuesday, November 10 at 7:00 PM ET.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap" rel="stylesheet">
+<style>
+/* ============ Base tokens (shared) ============ */
+:root{
+  --gold:#C9A86A; --gold-300:#E0C58A; --navy-900:#0B1424; --navy-800:#0F1B2D; --navy-700:#132340;
+  --signal:#A8432C; /* ledger withdrawals only */
+  --serif:"Playfair Display",Georgia,serif; --sans:"Jost",system-ui,sans-serif;
+  --s1:4px; --s2:8px; --s3:12px; --s4:16px; --s5:24px; --s6:32px; --s7:48px; --s8:64px; --s9:96px;
+  --wrap:1160px;
+}
+/* ============ Look: Couples OS (final) ============ */
+[data-look="cos"]{ --radius:2px; --btn-radius:2px; --page:#F7F5F1; --camel:#A97C56; }
+
+/* Tone sets: each section picks one per look */
+.t-dark{ --bg:var(--navy-800); --fg:#E6E9EE; --muted:#A9B6C9; --head:#F3F1EC; --accent:var(--gold); --eyebrow:var(--gold);
+  --rule:rgba(201,168,106,.35); --surface:rgba(19,35,64,.72); --surface-line:rgba(255,255,255,.09); --surface-fg:#E6E9EE; }
+[data-look="cos"] .t-light{ --bg:#F7F5F1; --fg:#344054; --muted:#5F6E76; --head:#0F1B2D; --accent:#B08D55; --eyebrow:#7C6233;
+  --rule:rgba(176,141,85,.4); --surface:#FFFFFF; --surface-line:#E6E1D8; --surface-fg:#344054; }
+[data-look="cos"] .t-paper{ --bg:#F7F5F1; --fg:#344054; --muted:#5F6E76; --head:#0F1B2D; --accent:#B08D55; --eyebrow:#7C6233;
+  --rule:rgba(176,141,85,.4); --surface:#FFFFFF; --surface-line:#E6E1D8; --surface-fg:#344054; }
+
+/* ============ Reset / base ============ */
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--page);font-family:var(--sans);font-weight:400;font-size:16px;line-height:1.6;color:#3E3A36;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+h1,h2,h3{font-family:var(--serif);font-weight:500;margin:0;color:var(--head);letter-spacing:-.01em;text-wrap:balance}
+h2 em,h1 em{font-style:italic;color:var(--accent)}
+p{margin:0 0 var(--s4)}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 var(--s6)}
+.sec{background:var(--bg);color:var(--fg);padding:var(--s9) 0}
+.eyebrow{display:inline-flex;align-items:center;gap:var(--s3);font:600 11px/1.4 var(--sans);letter-spacing:.22em;text-transform:uppercase;color:var(--eyebrow);margin-bottom:var(--s4)}
+.center{text-align:center}
+.lede{font-size:17px;line-height:1.65;font-weight:300}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:var(--s2);min-height:52px;padding:0 var(--s6);border:0;border-radius:var(--btn-radius);
+  background:var(--gold);color:var(--navy-800);font:600 12.5px/1 var(--sans);letter-spacing:.22em;text-transform:uppercase;text-decoration:none;cursor:pointer;
+  box-shadow:0 10px 24px -14px rgba(201,168,106,.9);transition:transform .2s ease, box-shadow .2s ease, background .2s}
+.btn:hover{transform:translateY(-1px);background:#D4B57A}
+.t-light .btn.alt,.t-paper .btn.alt{background:var(--navy-800);color:#F3F1EC;box-shadow:none}
+.t-light .btn.alt:hover,.t-paper .btn.alt:hover{background:var(--navy-700)}
+.fine{font-size:13px;color:var(--muted);line-height:1.55}
+
+
+/* ============ Top bar ============ */
+.topbar{background:var(--gold);color:var(--navy-800);text-align:center;font:600 11px/1.4 var(--sans);letter-spacing:.24em;text-transform:uppercase;padding:11px var(--s4)}
+
+/* ============ Hero: spotlight split ============ */
+.hero{padding:0;color:var(--fg);background:linear-gradient(#132340,#0F1B2D)}
+.hero-split{display:grid;grid-template-columns:minmax(0,44%) 1fr}
+.spot{position:relative;overflow:hidden;margin:0;background:radial-gradient(55% 42% at 50% 40%,rgba(201,168,106,.2),transparent 70%),linear-gradient(#0F1D35,#0B1424);border-right:1px solid rgba(201,168,106,.16)}
+.spot .arch{position:absolute;left:50%;top:44px;bottom:0;width:min(84%,480px);transform:translateX(-50%);border:1px solid rgba(201,168,106,.32);border-bottom:0;border-radius:999px 999px 0 0}
+.spot img{position:absolute;left:50%;bottom:-72px;transform:translateX(-50%);height:calc(100% + 10px);width:auto;max-width:none}
+.spot::after{content:"";position:absolute;inset:auto 0 0;height:30%;background:linear-gradient(transparent,#0B1424 94%)}
+.spot figcaption{position:absolute;left:40px;bottom:32px;z-index:1}
+.spot figcaption b{display:block;font:italic 500 26px/1.2 var(--serif);color:#F3F1EC}
+.spot figcaption span{display:block;font:600 10.5px/1.6 var(--sans);letter-spacing:.22em;text-transform:uppercase;color:var(--gold-300);margin-top:6px}
+.hero-copy{padding:44px 64px 48px 56px;max-width:760px;display:flex;flex-direction:column;justify-content:center}
+.hero-head{padding-bottom:var(--s5);margin-bottom:var(--s5);border-bottom:1px solid var(--rule)}
+.event-name{display:flex;flex-wrap:wrap;align-items:baseline;gap:0 .55em;font:600 23px/1.2 var(--sans);letter-spacing:.24em;text-transform:uppercase;color:var(--head);margin-bottom:var(--s3)}
+.event-name b{font-weight:600;background:linear-gradient(180deg,#E8CF96 0%,#C9A86A 55%,#A9864C 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.host{display:flex;align-items:center;gap:var(--s3);font-size:15px;line-height:1.55;color:var(--muted);margin:0}
+.host-avatar{display:none;flex:0 0 52px;width:52px;height:52px;border-radius:50%;overflow:hidden;background:radial-gradient(circle at 50% 40%,#22385F,#0F1B2D);box-shadow:0 0 0 2px var(--navy-800),0 0 0 3px var(--gold)}
+.host-avatar img{width:100%;height:auto;margin-top:2px}
+.host strong{color:var(--head);font-weight:500}
+.hero h1{font-size:40px;line-height:1.12;margin-bottom:var(--s5)}
+.sub{border-left:2px solid var(--gold);padding-left:var(--s5);margin-bottom:var(--s6);max-width:600px}
+.sub-lead{font:500 18px/1.45 var(--sans);color:var(--head);margin:0 0 var(--s2)}
+.sub-body{font-size:15.5px;line-height:1.7;color:var(--muted);margin:0}
+.hero h1 em{display:block}
+.hero .lede{font-size:16px;line-height:1.7;color:var(--muted);max-width:600px;margin-bottom:var(--s7)}
+.hero .lede strong{color:var(--head);font-weight:500}
+.cta-panel{border:1px solid var(--rule);background:rgba(255,255,255,.025);border-radius:var(--radius);padding:var(--s5)}
+.hero-cta{display:flex;align-items:center;gap:var(--s5);flex-wrap:wrap}
+.cta-count{display:flex;align-items:center;gap:var(--s5);margin-top:var(--s5);padding-top:var(--s4);border-top:1px solid var(--line, rgba(255,255,255,.08))}
+.cta-count .cd-label{margin:0;line-height:1.5}
+.cd-inline{display:flex;align-items:flex-start;gap:var(--s3)}
+.cd-inline div{text-align:center;min-width:40px}
+.cd-inline b{display:block;font:500 26px/1 var(--serif);color:var(--head)}
+.cd-inline small{display:block;margin-top:5px;font:500 9.5px/1 var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+.cd-inline i{font:400 20px/1 var(--serif);font-style:normal;color:var(--gold);opacity:.6;padding-top:2px}
+.btn-lg{min-height:60px;padding:0 40px;font-size:13px}
+.cta-when{display:flex;flex-direction:column;gap:4px;padding-left:var(--s5);border-left:1px solid var(--rule)}
+.cta-when b{font:600 11.5px/1.4 var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--head)}
+.cta-when span{font-size:13.5px;color:var(--muted)}
+.form-when{display:flex;flex-wrap:wrap;align-items:center;gap:6px 0;font:600 10.5px/1.4 var(--sans);letter-spacing:.18em;text-transform:uppercase;color:#7C6233;margin:0 0 var(--s5)}
+.form-when span+span::before{content:"";display:inline-block;width:4px;height:4px;border-radius:50%;background:var(--gold);margin:0 12px;vertical-align:middle}
+/* pop-up */
+.reg{padding:0;border:0;background:transparent;width:min(500px,calc(100% - 32px));max-height:calc(100% - 32px);overflow:auto}
+.reg::backdrop{background:rgba(11,20,36,.72);backdrop-filter:blur(3px)}
+.reg[open]{animation:pop .25s ease}
+@keyframes pop{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.reg .form-card{border-top:3px solid var(--gold)}
+.reg-x{position:absolute;top:10px;right:12px;width:40px;height:40px;border:0;background:transparent;font:300 28px/1 var(--sans);color:#667085;cursor:pointer;border-radius:50%}
+.reg-x:hover{background:#F2F4F7;color:#0F1B2D}
+.sms-toggle{display:inline-flex;align-items:center;gap:4px;border:0;background:none;padding:6px 0;margin:-4px 0 var(--s4);font:500 13.5px/1.3 var(--sans);color:#7C6233;cursor:pointer}
+.sms-toggle span{text-decoration:underline;text-underline-offset:3px}
+.sms-toggle i{font-style:normal;color:#6B7480;text-decoration:none}
+.sms-toggle[aria-expanded="true"]{display:none}
+.cd-label{font:600 10.5px/1 var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-bottom:var(--s3)}
+.countdown{display:flex;gap:var(--s2)}
+.countdown div{min-width:66px;padding:10px 6px 8px;text-align:center;background:var(--surface);border:1px solid var(--surface-line);border-radius:var(--radius)}
+.countdown b{display:block;font:500 24px/1.1 var(--serif);color:var(--head)}
+.countdown small{font:500 9.5px/1 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:var(--s3)}
+.opt{background:#F7F5F1;border:1px solid #ECE7DE;border-radius:var(--radius);padding:14px 14px 4px;margin-bottom:var(--s5)}
+.opt .field{margin-bottom:10px}
+.opt .consent{margin:0 0 10px}
+
+.form-card{position:relative;background:#FFFFFF;color:#344054;padding:28px 28px 22px;border-radius:var(--radius);box-shadow:0 34px 70px -30px rgba(0,0,0,.65)}
+.form-card h2{font-size:25px;color:#0F1B2D;margin-bottom:var(--s2)}
+.form-card .meta{font:500 11px/1.4 var(--sans);letter-spacing:.18em;text-transform:uppercase;color:#7C6233;margin-bottom:var(--s5)}
+.field{margin-bottom:var(--s4)}
+.field label{display:block;font:500 13.5px/1.3 var(--sans);color:#344054;margin-bottom:6px}
+.field label i{font-style:normal;color:#6B7480;font-weight:400}
+.field input{width:100%;height:48px;padding:0 var(--s4);font:400 16px var(--sans);color:#101828;background:#fff;border:1px solid #D0D5DD;border-radius:var(--btn-radius);transition:border-color .15s, box-shadow .15s}
+.field input:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 3px rgba(201,168,106,.25)}
+.field .hint{font-size:12.5px;color:#6B7480;margin-top:4px}
+.consent{display:grid;grid-template-columns:20px 1fr;gap:var(--s3);font-size:12px;line-height:1.5;color:#5F6B78;margin:var(--s2) 0 var(--s5)}
+.consent input{width:18px;height:18px;margin-top:2px;accent-color:#0F1B2D}
+.form-card .btn{width:100%}
+.form-card .fine{margin:var(--s3) 0 0;text-align:center;color:#5F6B78}
+.form-ok{display:none;text-align:center;padding:var(--s5) 0}
+.form-ok h3{font-size:24px;color:#0F1B2D;margin-bottom:var(--s2)}
+.sent .form-body{display:none}.sent .form-ok{display:block}
+
+/* ============ Problem ============ */
+.p-head{max-width:880px;margin:0 auto var(--s8)}
+.problem h2{font-size:46px;line-height:1.12}
+.problem h2 em{display:block}
+.problem-grid{display:grid;grid-template-columns:1fr 1fr;gap:var(--s7);align-items:center}
+.scenes{list-style:none;margin:0;padding:0;border-top:1px solid var(--rule)}
+.scenes li{display:grid;grid-template-columns:52px 1fr;gap:var(--s5);align-items:center;padding:28px 0;border-bottom:1px solid var(--rule)}
+.scenes p{margin:0;font-size:17px;line-height:1.6;color:var(--fg)}
+.scenes p b{color:var(--head);font-weight:600}
+.ico{width:52px;height:52px;border-radius:50%;display:grid;place-items:center;background:var(--navy-800);color:var(--gold);box-shadow:0 0 0 3px var(--bg),0 0 0 4px rgba(201,168,106,.55)}
+.ico svg,.pat-ico svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.pat-ico svg .fill{fill:currentColor;stroke:none}
+.p-intro{display:flex;align-items:center;gap:var(--s5);margin:var(--s8) 0 var(--s6);font:italic 500 22px/1.4 var(--serif);color:var(--head);text-align:center}
+.p-intro::before,.p-intro::after{content:"";flex:1;min-width:24px;height:1px;background:var(--rule)}
+.p-intro strong{font-weight:600;color:var(--accent)}
+.patterns{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--s5)}
+.pat{background:var(--surface);border:1px solid var(--surface-line);border-top:2px solid var(--gold);border-radius:var(--radius);padding:var(--s6);box-shadow:0 24px 50px -40px rgba(20,33,58,.45)}
+.pat-ico{display:inline-grid;place-items:center;width:48px;height:48px;border-radius:50%;background:rgba(201,168,106,.14);color:#8A6D3B;margin-bottom:var(--s4)}
+.pat h3{font-size:24px;margin-bottom:var(--s2)}
+.pat p{margin:0;font-size:15.5px;line-height:1.6;color:var(--surface-fg)}
+.p-close{position:relative;display:grid;grid-template-columns:1fr auto;gap:var(--s7);align-items:center;margin-top:var(--s8);padding:44px 52px;background:linear-gradient(135deg,#132340,#0F1B2D);border-radius:var(--radius);box-shadow:0 30px 60px -35px rgba(11,20,36,.6);overflow:hidden}
+.p-close::before{content:"";position:absolute;inset:8px;border:1px solid rgba(201,168,106,.28);border-radius:var(--radius);pointer-events:none}
+.closer{margin:0;font:500 25px/1.45 var(--serif);color:#F3F1EC;text-wrap:balance}
+.closer em{display:block;color:var(--gold)}
+.p-cta{position:relative;display:flex;flex-direction:column;align-items:center;gap:var(--s3);padding-left:var(--s7);border-left:1px solid rgba(201,168,106,.3)}
+.p-cta .when{font:600 10.5px/1.7 var(--sans);letter-spacing:.18em;text-transform:uppercase;color:#C9D2DF;text-align:center}
+
+.ledger{background:var(--surface);border:1px solid var(--surface-line);border-radius:var(--radius);padding:26px 28px 18px;box-shadow:0 30px 60px -40px rgba(20,33,58,.5);font-variant-numeric:tabular-nums}
+.ledger header{display:flex;justify-content:space-between;align-items:baseline;gap:var(--s3);flex-wrap:wrap;border-bottom:2px solid var(--head);padding-bottom:var(--s3);margin-bottom:4px}
+.ledger .key{display:flex;gap:var(--s3);font-size:12px}
+.ledger .key i{font-style:normal;font-weight:500}
+.ledger header b{font:600 11px/1 var(--sans);letter-spacing:.24em;text-transform:uppercase;color:var(--head)}
+.ledger table{width:100%;border-collapse:collapse;font-size:14.5px}
+.ledger td{padding:10px 0;border-bottom:1px dashed var(--surface-line);color:var(--surface-fg);vertical-align:top;line-height:1.45}
+.ledger td:not(:first-child){text-align:right;white-space:nowrap;padding-left:var(--s4);width:1%}
+.ledger .dep{color:#2F5D50;font-weight:500}
+.ledger .wd{color:var(--signal);font-weight:500}
+.ledger .none td{color:var(--muted);font-style:italic}
+.ledger .balance td{border-bottom:0;border-top:2px solid var(--head);padding-top:var(--s3);font:600 15px/1.3 var(--sans);color:var(--head)}
+.ledger .balance td:last-child{color:var(--signal)}
+.ledger-note{font-size:12.5px;color:var(--muted);margin:var(--s3) 0 0;text-align:right}
+.js .ledger tbody tr{opacity:0;transform:translateY(6px);transition:opacity .5s ease, transform .5s ease}
+.js .ledger.in tbody tr{opacity:1;transform:none}
+
+/* ============ Way forward ============ */
+.way-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:var(--s8);align-items:stretch}
+.way h2{font-size:46px;line-height:1.1;margin-bottom:var(--s6)}
+.way h2 em{display:block}
+.causes{display:grid;gap:var(--s3)}
+.cause{display:grid;grid-template-columns:52px 1fr;gap:var(--s5);align-items:center;padding:20px 24px;background:rgba(255,255,255,.04);border-radius:4px}
+.cause p{margin:0;font-size:17px;line-height:1.65;font-weight:300;color:var(--fg)}
+.cause b{color:var(--head);font-weight:600}
+.way .ico{background:rgba(201,168,106,.1);box-shadow:0 0 0 1px rgba(201,168,106,.55)}
+.way .ico svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.answer{margin-top:var(--s6)}
+.answer p{margin:0 0 var(--s3);font-size:17px;line-height:1.75;font-weight:300;color:var(--fg)}
+.answer .no{display:inline-block;padding:0 12px;margin:2px 2px;border:1px solid rgba(255,255,255,.2);border-radius:999px;font-style:italic;color:var(--muted);white-space:nowrap;line-height:1.7}
+.answer strong{font:italic 500 21px/1.4 var(--serif);color:var(--gold)}
+.way-photo{position:relative;margin:0;align-self:center}
+.way-photo img{position:relative;display:block;width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;object-position:50% 10%;border-radius:4px;box-shadow:0 34px 70px -30px rgba(0,0,0,.75)}
+.pull{margin:var(--s8) auto 0;max-width:980px;padding:0 var(--s5);font:500 30px/1.4 var(--serif);color:var(--head);text-align:center;text-wrap:balance}
+.pull em{display:block;color:var(--accent)}
+.pull::before{content:"\201C";display:block;font:500 96px/.6 var(--serif);color:var(--gold);opacity:.85;margin-bottom:var(--s3)}
+
+/* ============ Steps ============ */
+.steps-head{max-width:760px;margin:0 auto var(--s8)}
+.steps-head h2{font-size:46px;line-height:1.1}
+.steps-head h2 em{display:block}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--s5);align-items:stretch}
+.step{position:relative;background:var(--surface);border-radius:6px;padding:32px 32px 34px;box-shadow:0 2px 0 rgba(201,168,106,.55) inset,0 28px 60px -38px rgba(20,33,58,.5)}
+.step{overflow:hidden}
+.step::after{content:attr(data-n);position:absolute;right:22px;bottom:-6px;font:italic 500 120px/1 var(--serif);color:var(--gold);opacity:.2;pointer-events:none}
+.step>*{position:relative;z-index:1}
+.step-top{margin-bottom:var(--s5)}
+.step-ico{width:52px;height:52px;border-radius:50%;display:grid;place-items:center;background:var(--navy-800);color:var(--gold)}
+.step-ico svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.step .verb{font:600 11.5px/1 var(--sans);letter-spacing:.26em;text-transform:uppercase;color:var(--eyebrow);margin-bottom:var(--s3)}
+.step h3{font-size:24px;line-height:1.25;margin-bottom:var(--s3)}
+.step p{font-size:15.5px;line-height:1.65;color:var(--surface-fg);margin:0}
+.seats{display:flex;flex-wrap:wrap;gap:8px;margin-top:var(--s5)}
+.seats span{font:500 12.5px/1 var(--sans);padding:9px 12px;border-radius:999px;background:#F3EEE4;color:var(--head)}
+.steps-foot{max-width:760px;margin:var(--s8) auto 0;text-align:center}
+.sf-lead{font:500 26px/1.4 var(--serif);color:var(--head);margin:0 0 var(--s3);text-wrap:balance}
+.sf-body{font-size:16.5px;color:var(--muted);margin:0}
+
+/* ============ About ============ */
+.about-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:var(--s8);align-items:center}
+.about-photo{position:relative;height:520px;border-radius:var(--radius);overflow:hidden}
+.about-photo img{width:100%;height:100%;object-fit:cover;object-position:50% 15%}
+.about-photo{border-radius:260px 260px var(--radius) var(--radius);background:var(--camel);box-shadow:0 0 0 10px var(--navy-800),0 0 0 11px rgba(201,168,106,.45)}
+.about h2{font-size:42px;line-height:1.12;margin-bottom:var(--s5)}
+.about h2 em{display:block}
+.creds{list-style:none;padding:0;margin:var(--s5) 0 0;display:grid;grid-template-columns:1fr 1fr;gap:var(--s3) var(--s5)}
+.creds li{display:grid;grid-template-columns:22px 1fr;gap:var(--s2);font-size:15px;color:var(--head)}
+.creds svg{margin-top:4px}
+
+/* ============ FAQ ============ */
+.faq h2{font-size:42px;margin-bottom:var(--s7)}
+.faq-grid{display:grid;grid-template-columns:1fr 1fr;gap:0 var(--s8);max-width:980px;margin:0 auto;border-top:1px solid var(--rule)}
+.faq-grid div{padding:var(--s5) 0;border-bottom:1px solid var(--rule)}
+.faq h3{font-size:20px;margin-bottom:var(--s2)}
+.faq p{font-size:15.5px;margin:0}
+
+/* ============ Final ============ */
+.final .inner{max-width:760px;margin:0 auto;text-align:center}
+.final h2{font-size:48px;line-height:1.1;margin-bottom:var(--s5)}
+.final h2 em{display:block}
+.final .lede{margin-bottom:var(--s3)}
+.final .join{font:italic 500 20px/1.4 var(--serif);color:var(--head);margin-bottom:var(--s5)}
+.final .when{font:500 12px/1.4 var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--accent);margin-bottom:var(--s5)}
+.final .countdown{justify-content:center;margin-top:var(--s6)}
+.final .cd-label{margin-top:var(--s7);text-align:center}
+
+/* ============ Footer ============ */
+.foot{background:var(--navy-900);color:#8FA2BD;text-align:center;padding:var(--s7) 0;font-size:13px}
+.foot .mark{font:italic 500 20px/1 var(--serif);color:#F3F1EC;margin-bottom:var(--s3)}
+.foot .mark b{font-style:normal;font:600 10px/1 var(--sans);letter-spacing:.26em;color:var(--gold);display:block;margin-bottom:8px}
+.foot p{margin:0 0 6px}
+.foot a{color:#C9D2DF}
+
+/* ============ Reveal ============ */
+.js .reveal{opacity:0;transform:translateY(14px);transition:opacity .7s ease, transform .7s ease}
+.js .reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){ .js .reveal,.js .ledger tbody tr{opacity:1!important;transform:none!important;transition:none} html{scroll-behavior:auto} .btn{transition:none} }
+
+/* ============ Responsive ============ */
+@media (max-width:1100px){
+  .hero-split{grid-template-columns:minmax(0,1fr);min-height:0}
+  .hero-copy{order:-1;padding:40px 32px 48px;max-width:none}
+  .host-avatar{display:block}
+  .spot{height:520px;border-right:0}
+  .spot figcaption{display:none}
+}
+@media (max-width:980px){
+  .problem-grid,.about-grid{grid-template-columns:1fr;gap:var(--s7)}
+  .steps{grid-template-columns:1fr}
+  .way-grid{grid-template-columns:1fr;gap:var(--s6)}
+  .way-photo{width:100%;max-width:380px;margin:0 auto}
+  .patterns{grid-template-columns:1fr}
+  .about-photo{max-width:420px;height:460px;margin:0 auto}
+}
+@media (max-width:640px){
+  .wrap{padding:0 var(--s4)}
+  .sec{padding:var(--s8) 0}
+  .hero h1{font-size:29px;margin-bottom:var(--s4)}
+  .host{font-size:14px}
+  .hero-cta{flex-direction:column;align-items:stretch;gap:var(--s3)}
+  .cta-panel{padding:var(--s4)}
+  .cta-count{flex-direction:column;align-items:center;gap:var(--s2)}
+  .cta-count .cd-label br{display:none}
+  .cd-inline{gap:var(--s2)}
+  .cd-inline b{font-size:22px}
+  .sub{padding-left:var(--s4);margin-bottom:var(--s5)}
+  .sub-lead{font-size:16px}
+  .sub-body{font-size:14.5px}
+  .hero-head{padding-bottom:var(--s4);margin-bottom:var(--s4)}
+  .btn-lg{width:100%}
+  .cta-when{border-left:0;padding-left:0;text-align:center}
+  .spot{height:470px}
+  .spot .arch{top:36px;width:86%}
+  .spot img{height:calc(100% - 44px);bottom:0}
+  .spot figcaption{left:20px;bottom:22px}
+  .spot figcaption b{font-size:22px}
+  .hero-copy{padding:24px 16px 40px}
+  .event-name{margin-bottom:var(--s3)}
+  .topbar{font-size:10px;letter-spacing:.16em;padding:8px 12px}
+  .event-name{letter-spacing:.16em;font-size:16px}
+  .problem h2,.way h2,.steps-head h2,.about h2,.faq h2{font-size:32px}
+  .step{padding:26px 22px 40px}
+  .step::after{font-size:80px;opacity:.14;right:14px;bottom:-4px}
+  .sf-lead{font-size:21px}
+  .sf-body{font-size:15.5px}
+  .final h2{font-size:34px}
+  .pull{font-size:22px;padding:0}
+  .cause{grid-template-columns:44px 1fr;gap:var(--s4)}
+  .cause p,.answer p{font-size:16px}
+  .answer strong{font-size:18px}
+  .way-photo{max-width:320px}
+  .cause{padding:16px}
+  .countdown div{min-width:0;flex:1}
+  .form-card{padding:var(--s5)}
+  .p-head{margin-bottom:var(--s6)}
+  .scenes li{grid-template-columns:44px 1fr;gap:var(--s4)}
+  .ico{width:44px;height:44px}
+  .scenes p{font-size:16px}
+  .p-intro{font-size:18px;gap:var(--s3);margin:var(--s7) 0 var(--s5)}
+  .p-cta .btn{width:100%}
+  .p-cta .when{font-size:10px;letter-spacing:.14em}
+  .pat{padding:var(--s5)}
+  .p-close{grid-template-columns:1fr;gap:var(--s5);padding:32px 22px;margin-top:var(--s7);text-align:center}
+  .closer{font-size:20px}
+  .p-cta{padding-left:0;border-left:0;padding-top:var(--s5);border-top:1px solid rgba(201,168,106,.3)}
+  .ledger{padding:var(--s5) var(--s4)}
+  .ledger table{font-size:13.5px}
+  .faq-grid{grid-template-columns:1fr}
+  .creds{grid-template-columns:1fr}
+  .about-photo{height:400px}
+}
+</style>
+</head>
+<body>
+
+
+<div class="topbar">Free live masterclass · Tuesday, November 10 · 7:00 PM ET</div>
+
+<!-- 1. HERO -->
+<header class="hero t-dark" id="top">
+  <div class="hero-split">
+    <figure class="spot">
+      <div class="arch" aria-hidden="true"></div>
+      <img src="assets/pd-7800-cutout.webp" alt="Dr. Dharius Daniels" width="1300" height="1949">
+      <figcaption><b>Dr. Dharius Daniels</b><span>Author of Relational Intelligence</span></figcaption>
+    </figure>
+    <div class="hero-copy reveal">
+      <div class="hero-head">
+        <div class="event-name"><b>Upside Down</b> Relationships</div>
+        <p class="host"><span class="host-avatar" aria-hidden="true"><img src="assets/pd-7800-cutout.webp" alt="" width="1300" height="1949"></span><span>A Free Live Masterclass with <strong>Dr. Dharius Daniels</strong>, Author of <i>Relational Intelligence</i></span></p>
+      </div>
+      <h1>How to Turn <span style="white-space:nowrap">Upside Down</span> Relationships Into Relationships That Fulfill You <em>Instead of Drain You</em></h1>
+      <div class="sub">
+        <p class="sub-lead">You're making the deposits. They're making the withdrawals.</p>
+        <p class="sub-body">And whether it's at work, in your family, or in love, you're left feeling exhausted, unappreciated, and stretched too thin. Discover three steps to knowing what to expect, how much to invest, and what to change so showing up for others doesn't mean losing yourself.</p>
+      </div>
+      <div class="cta-panel">
+        <div class="hero-cta">
+          <button class="btn btn-lg" type="button" data-open-form>Save my free seat</button>
+          <div class="cta-when"><b>Tuesday, November 10 · 7:00 PM ET</b><span>Live Online · Free</span></div>
+        </div>
+        <div class="cta-count">
+          <span class="cd-label">Masterclass <br>starts in</span>
+          <div class="cd-inline" data-countdown aria-live="off">
+            <div><b data-d>--</b><small>Days</small></div><i>:</i><div><b data-h>--</b><small>Hrs</small></div><i>:</i><div><b data-m>--</b><small>Min</small></div><i>:</i><div><b data-s>--</b><small>Sec</small></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- Registration pop-up (in GHL: a popup containing the native form) -->
+<dialog class="reg" id="register" aria-labelledby="reg-h">
+  <form class="form-card" data-form novalidate>
+    <button type="button" class="reg-x" data-close aria-label="Close">&times;</button>
+    <div class="form-body">
+      <h2 id="reg-h">Save your free seat.</h2>
+      <div class="form-when"><span>Tuesday, November 10</span><span>7:00 PM ET</span><span>Live Online</span><span>Free</span></div>
+      <div class="field"><label for="fn">First name</label><input id="fn" name="first_name" type="text" autocomplete="given-name" required></div>
+      <div class="field"><label for="em">Email address</label><input id="em" name="email" type="email" inputmode="email" autocomplete="email" required></div>
+      <button type="button" class="sms-toggle" aria-expanded="false" aria-controls="sms" data-sms><span>+ Get text reminders</span> <i>(optional)</i></button>
+      <div class="opt" id="sms" hidden>
+        <div class="field"><label for="ph">Mobile number <i>(optional, for text reminders)</i></label><input id="ph" name="phone" type="tel" inputmode="tel" autocomplete="tel"></div>
+        <label class="consent"><input type="checkbox" name="sms_consent"><span>Yes, send me masterclass confirmation and reminder texts from [SENDER NAME]. Message frequency varies. Message and data rates may apply. Reply STOP to opt out or HELP for help. Consent is not required to register. <a href="#">[TERMS]</a> <a href="#">[PRIVACY POLICY]</a></span></label>
+      </div>
+      <button class="btn" type="submit">Save my free seat</button>
+      <p class="fine">We'll email your confirmation, access details, and reminders. No payment or book purchase required.</p>
+    </div>
+    <div class="form-ok" role="status">
+      <h3>You're registered.</h3>
+      <p class="fine">Preview only. In GoHighLevel this button continues to the Prep Kit page.</p>
+    </div>
+  </form>
+</dialog>
+
+<main>
+<!-- 2. PROBLEM -->
+<section class="sec problem t-light" aria-labelledby="p-h">
+  <div class="wrap">
+    <div class="p-head center reveal">
+      <div class="eyebrow center">Sound familiar?</div>
+      <h2 id="p-h">Everyone Can Count on You. <em>But You're Running Out of You.</em></h2>
+    </div>
+
+    <div class="problem-grid">
+      <ul class="scenes reveal">
+        <li><span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M3 12.5h18"/></svg></span><p><b>At work,</b> you keep covering the gaps, even when your own responsibilities are piling up.</p></li>
+        <li><span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7.5-4.6-7.5-10.2A4.3 4.3 0 0 1 12 7.1a4.3 4.3 0 0 1 7.5 2.7C19.5 15.4 12 20 12 20z"/></svg></span><p><b>In a relationship,</b> you're making the plans, starting the conversations, and doing the work to keep things moving.</p></li>
+        <li><span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9.5" r="2.4"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6M15.5 14.3c.5-.1 1-.2 1.5-.2 2.6 0 4.5 2 4.5 5"/></svg></span><p><b>With family or friends,</b> their needs keep becoming your responsibility. Your needs keep getting postponed.</p></li>
+      </ul>
+
+      <div class="reveal">
+        <div class="ledger" data-ledger>
+          <header><b>The relationship ledger</b><span class="key"><i class="dep">+ deposit</i><i class="wd">− withdrawal</i></span></header>
+          <table>
+            <tbody>
+              <tr><td>You covered a coworker's deadline. Again.</td><td class="dep">+ 3 hrs</td></tr>
+              <tr><td>"Can you help me out this month?"</td><td class="wd">− $300</td></tr>
+              <tr><td>You planned the weekend, the dinner, the call.</td><td class="dep">+ every time</td></tr>
+              <tr><td>Their 11:40 PM emergency became yours.</td><td class="wd">− a night's sleep</td></tr>
+              <tr><td>"I'll be there next time."</td><td class="wd">− your trust</td></tr>
+              <tr class="none"><td>Deposits made back to you</td><td>none</td></tr>
+            </tbody>
+            <tfoot><tr class="balance"><td>Left for you</td><td>Running low</td></tr></tfoot>
+          </table>
+        </div>
+        <p class="ledger-note">Illustrative. Your ledger looks different, but you know the feeling.</p>
+      </div>
+    </div>
+
+    <p class="p-intro reveal"><span>Dr. Daniels calls this being <strong>upside down in your relationships</strong>:</span></p>
+
+    <div class="patterns">
+      <article class="pat reveal"><span class="pat-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><ellipse cx="12" cy="6" rx="7" ry="2.5"/><path d="M5 6v4c0 1.4 3.1 2.5 7 2.5s7-1.1 7-2.5V6M5 10v4c0 1.4 3.1 2.5 7 2.5s7-1.1 7-2.5v-4M5 14v4c0 1.4 3.1 2.5 7 2.5s7-1.1 7-2.5v-4"/></svg></span><h3>Overinvested</h3><p>You're giving more time, energy, or money than you can sustain.</p></article>
+      <article class="pat reveal"><span class="pat-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.5V21M8 21h8M4 10.5l16-4"/><path d="M4 10.5 1.8 15a2.4 2.4 0 0 0 4.4 0z"/><path d="M20 6.5 17.8 11a2.4 2.4 0 0 0 4.4 0z"/></svg></span><h3>Overcommitted</h3><p>You're more committed to the relationship, or to someone's progress, than they are.</p></article>
+      <article class="pat reveal"><span class="pat-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="7" width="17" height="10" rx="2"/><path d="M22 10.5v3"/><rect x="5" y="9.5" width="3" height="5" rx=".5" class="fill"/></svg></span><h3>Overextended</h3><p>What you're giving is costing you the capacity to care for yourself and the rest of your life.</p></article>
+    </div>
+
+    <div class="p-close reveal">
+      <p class="closer">You don't necessarily want these people out of your life. <em>You want a way to relate to them that doesn't keep leaving you empty.</em></p>
+      <div class="p-cta"><a class="btn" href="#register" data-open-form>Save my free seat</a><span class="when">Tuesday, November 10 · 7:00 PM ET<br>Live Online · Free</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- 3. WAY FORWARD -->
+<section class="sec way t-dark" aria-labelledby="w-h">
+  <div class="wrap">
+    <div class="way-grid">
+      <div class="way-copy reveal">
+        <div class="eyebrow lead">A different way forward</div>
+        <h2 id="w-h">Giving More Won't Fix <em>What Needs to Be Realigned.</em></h2>
+        <div class="causes">
+          <div class="cause"><span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 11V4.5a1.5 1.5 0 0 1 1.5-1.5h8a1.5 1.5 0 0 1 1.5 1.5V11"/><path d="M4.5 11h15v3h-15zM6.5 14v7M17.5 14v7"/></svg></span><p><b>Sometimes</b> the problem is where you've placed someone: you're expecting a level of support, trust, or care the relationship hasn't shown it can provide.</p></div>
+          <div class="cause"><span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h9M17 6h3M4 12h3M11 12h9M4 18h11M19 18h1"/><circle cx="15" cy="6" r="2"/><circle cx="9" cy="12" r="2"/><circle cx="17" cy="18" r="2"/></svg></span><p><b>Other times,</b> the person belongs in your life, but the way you're managing that relationship needs to change.</p></div>
+        </div>
+        <div class="answer">
+          <p>That's why the answer isn't always <span class="no">“try harder”</span> or <span class="no">“cut them off.”</span></p>
+          <p>It starts with getting clear about <strong>what you expect and what you invest</strong>.</p>
+        </div>
+      </div>
+      <figure class="way-photo reveal">
+        <img src="assets/pd-7996-portrait.jpg" alt="Dr. Dharius Daniels" width="900" height="1125" loading="lazy">
+      </figure>
+    </div>
+    <blockquote class="pull reveal">A relationship doesn't have to be an equal exchange every day. <em>But giving shouldn't mean taking on more than you can carry.</em></blockquote>
+  </div>
+</section>
+
+<!-- 4. STEPS -->
+<section class="sec steps-sec t-paper" aria-labelledby="s-h">
+  <div class="wrap">
+    <div class="steps-head center reveal">
+      <div class="eyebrow center">What you'll learn</div>
+      <h2 id="s-h">Three Steps to Start Turning Things <em>Right Side Up</em></h2>
+    </div>
+    <div class="steps">
+      <article class="step reveal" data-n="01">
+        <div class="step-top"><span class="step-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5 21 21"/></svg></span></div>
+        <div class="verb">Evaluate</div>
+        <h3>See where you're upside down.</h3>
+        <p>Learn to recognize the gap between what a relationship is showing you and what you keep hoping it will become. Look at the pattern, including your own expectations and choices, before deciding what needs to change.</p>
+      </article>
+      <article class="step reveal" data-n="02">
+        <div class="step-top"><span class="step-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 11V4.5a1.5 1.5 0 0 1 1.5-1.5h8a1.5 1.5 0 0 1 1.5 1.5V11"/><path d="M4.5 11h15v3h-15zM6.5 14v7M17.5 14v7"/></svg></span></div>
+        <div class="verb">Place</div>
+        <h3>Know what each relationship can realistically carry.</h3>
+        <p>Explore the five seats: friends, associates, assignments (people you help or guide), advisors (people who guide you), and family. Understand how these roles help you make wiser decisions about trust, access, and investment.</p>
+        <div class="seats" aria-label="The five seats"><span>Friends</span><span>Associates</span><span>Assignments</span><span>Advisors</span><span>Family</span></div>
+      </article>
+      <article class="step reveal" data-n="03">
+        <div class="step-top"><span class="step-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h9M17 6h3M4 12h3M11 12h9M4 18h11M19 18h1"/><circle cx="15" cy="6" r="2"/><circle cx="9" cy="12" r="2"/><circle cx="17" cy="18" r="2"/></svg></span></div>
+        <div class="verb">Manage</div>
+        <h3>Know what to do with that clarity.</h3>
+        <p>Discover how to approach changes in what you give and expect, when a quiet adjustment may be enough, and when an honest conversation or boundary is needed.</p>
+      </article>
+    </div>
+    <div class="steps-foot reveal">
+      <p class="sf-lead">You don't have to wait for everyone else to change before reconsidering how you show up.</p>
+      <p class="sf-body">This masterclass will introduce the approach and help you see where to begin.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 5. ABOUT -->
+<section class="sec about t-dark" aria-labelledby="a-h">
+  <div class="wrap about-grid">
+    <div class="about-photo reveal">
+      <img src="assets/pd-7998.jpg" alt="Dr. Dharius Daniels" width="1000" height="1499">
+    </div>
+    <div class="reveal">
+      <div class="eyebrow lead">Your host</div>
+      <h2 id="a-h">Learn Directly From the Author of <em>Relational Intelligence.</em></h2>
+      <p class="lede">Dr. Dharius Daniels wrote <i>Relational Intelligence: The People Skills You Need for the Life of Purpose You Want</i>. In this live masterclass, he'll connect that teaching to a problem people face across friendships, family, work, and romantic relationships: giving so much to others that there's too little left for their own lives.</p>
+      <ul class="creds">
+        <li><svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M2 7.5l3 3 7-7" fill="none" stroke="#C9A86A" stroke-width="1.6"/></svg><span>Author of <i>Relational Intelligence</i></span></li>
+        <li><svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M2 7.5l3 3 7-7" fill="none" stroke="#C9A86A" stroke-width="1.6"/></svg>Certified emotional intelligence specialist</li>
+        <li><svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M2 7.5l3 3 7-7" fill="none" stroke="#C9A86A" stroke-width="1.6"/></svg>Postgraduate degrees from Princeton and Fuller</li>
+        <li><svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M2 7.5l3 3 7-7" fill="none" stroke="#C9A86A" stroke-width="1.6"/></svg>More than 20 years of leadership experience</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- 6. FAQ -->
+<section class="sec faq t-light" aria-labelledby="f-h">
+  <div class="wrap">
+    <div class="center reveal"><div class="eyebrow center">Quick answers</div><h2 id="f-h">Before You <em>Save Your Seat</em></h2></div>
+    <div class="faq-grid reveal">
+      <div><h3>Is this only for couples?</h3><p>No. This masterclass is for individuals navigating relationships across their lives, including family, friendships, work, and romance. Single, dating, engaged, or married, you can attend on your own.</p></div>
+      <div><h3>Is this about cutting people off?</h3><p>No. Turning a relationship right side up may mean adjusting your expectations, availability, or investment, not ending it. Different relationships also carry different responsibilities.</p></div>
+      <div><h3>Do I need to have read the book?</h3><p>No. You can come without knowing the book or its framework. No book purchase is required.</p></div>
+      <div><h3>Will I have to share anything personal?</h3><p>No. You'll be invited to think about your own relationships, but you won't need to share anyone's name or private details.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 7. FINAL -->
+<section class="sec final t-dark" aria-labelledby="c-h">
+  <div class="wrap"><div class="inner reveal">
+    <div class="eyebrow center">Your seat is waiting</div>
+    <h2 id="c-h">You Can Be There for People <em>Without Being Everything to Everyone.</em></h2>
+    <p class="lede">Before you give more of yourself to the same pattern, learn how to see it clearly and approach it differently.</p>
+    <p class="join">Join Upside Down Relationships with Dr. Dharius Daniels.</p>
+    <div class="when">Tuesday, November 10 · 7:00 PM ET · Free live masterclass</div>
+    <a class="btn" href="#register" data-open-form>Save my free seat</a>
+    <p class="fine" style="margin-top:var(--s3)">Register with your first name and email. We'll send the details for joining live.</p>
+    <div class="cd-label">Masterclass starts in</div>
+    <div class="countdown" data-countdown aria-hidden="true">
+      <div><b data-d>--</b><small>Days</small></div><div><b data-h>--</b><small>Hrs</small></div><div><b data-m>--</b><small>Min</small></div><div><b data-s>--</b><small>Sec</small></div>
+    </div>
+  </div></div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="mark"><b>A free live masterclass</b>Relational Intelligence</div>
+    <p>This masterclass is educational, not therapy or individualized counseling.</p>
+    <p><a href="#">[PRIVACY POLICY]</a> &nbsp;|&nbsp; <a href="#">[TERMS]</a></p>
+    <p>© 2026 Dr. Dharius Daniels. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+document.documentElement.classList.add('js');
+(function(){
+
+  // Countdown to Tue Nov 10, 2026, 7:00 PM ET
+  var target=Date.parse('2026-11-10T19:00:00-05:00');
+  function pad(n){return String(n).padStart(2,'0');}
+  function tick(){
+    var diff=Math.max(0,target-Date.now()), d=Math.floor(diff/864e5), h=Math.floor(diff/36e5)%24, m=Math.floor(diff/6e4)%60, s=Math.floor(diff/1e3)%60;
+    document.querySelectorAll('[data-countdown]').forEach(function(c){
+      c.querySelector('[data-d]').textContent=pad(d); c.querySelector('[data-h]').textContent=pad(h);
+      c.querySelector('[data-m]').textContent=pad(m); c.querySelector('[data-s]').textContent=pad(s); });
+  }
+  tick(); setInterval(tick,1000);
+
+  // Every CTA opens the registration pop-up
+  var dlg=document.getElementById('register');
+  document.querySelectorAll('[data-open-form]').forEach(function(a){ a.addEventListener('click',function(e){ e.preventDefault(); dlg.showModal(); document.getElementById('fn').focus(); }); });
+  dlg.querySelector('[data-close]').addEventListener('click',function(){ dlg.close(); });
+  dlg.addEventListener('click',function(e){ if(e.target===dlg) dlg.close(); });
+  // Optional SMS fields appear only when asked for
+  var smsBtn=dlg.querySelector('[data-sms]');
+  smsBtn.addEventListener('click',function(){ smsBtn.setAttribute('aria-expanded','true'); document.getElementById('sms').hidden=false; document.getElementById('ph').focus(); });
+
+  // Preview form behaviour
+  var f=document.querySelector('[data-form]');
+  f.addEventListener('submit',function(e){ e.preventDefault();
+    var ok=true; ['fn','em'].forEach(function(id){ var i=document.getElementById(id); if(!i.value.trim()||(i.type==='email'&&!/^\S+@\S+\.\S+$/.test(i.value))){ ok=false; i.setAttribute('aria-invalid','true'); i.style.borderColor='#A8432C'; } else { i.removeAttribute('aria-invalid'); i.style.borderColor=''; } });
+    if(ok) f.classList.add('sent'); else f.querySelector('[aria-invalid]').focus(); });
+
+  // Reveals + ledger rows
+  var els=document.querySelectorAll('.reveal,[data-ledger]');
+  if(!('IntersectionObserver' in window)){ els.forEach(function(e){e.classList.add('in');}); return; }
+  var io=new IntersectionObserver(function(entries){ entries.forEach(function(en){ if(en.isIntersecting){ en.target.classList.add('in');
+      if(en.target.matches('[data-ledger]')) en.target.querySelectorAll('tbody tr').forEach(function(r,i){ r.style.transitionDelay=(i*160)+'ms'; });
+      io.unobserve(en.target);} }); },{threshold:.15});
+  els.forEach(function(e){io.observe(e);});
+})();
+</script>
+</body>
+</html>

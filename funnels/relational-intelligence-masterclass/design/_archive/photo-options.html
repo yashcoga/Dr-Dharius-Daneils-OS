@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Photo Options · Section 3</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;1,500&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#0F1B2D;--gold:#C9A86A}
+*{box-sizing:border-box}
+body{margin:0;background:var(--navy);color:#E6E9EE;font-family:"Jost",system-ui,sans-serif;padding:48px 24px 72px}
+h1{font:500 30px/1.2 "Playfair Display",Georgia,serif;text-align:center;margin:0 0 8px;color:#F3F1EC}
+.sub{text-align:center;color:#A9B6C9;margin:0 0 48px;font-size:15px}
+.grid{max-width:1240px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:40px}
+.opt b{display:block;min-height:32px;font:600 11px/1.4 "Jost",sans-serif;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:6px}
+.opt p{margin:0 0 20px;font-size:14px;line-height:1.5;color:#A9B6C9;min-height:84px}
+/* shared frame: photo card + offset gold block */
+.frame{position:relative;padding:0 18px 18px 0}
+.frame::before{content:"";position:absolute;top:18px;left:18px;right:0;bottom:0;background:linear-gradient(135deg,#D4B57A,#9A7740);border-radius:4px}
+.card{position:relative;aspect-ratio:4/5;border-radius:4px;overflow:hidden;box-shadow:0 34px 70px -30px rgba(0,0,0,.75)}
+.card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 0}
+/* backgrounds */
+.bg-studio{background:#A97C56}
+.bg-spot{background:radial-gradient(70% 55% at 50% 30%,#3A5482 0%,#1B2D4E 42%,#0E1A2F 100%)}
+.bg-spot::after{content:"";position:absolute;inset:auto 0 0;height:30%;background:linear-gradient(transparent,rgba(201,168,106,.18))}
+.bg-cream{background:radial-gradient(75% 60% at 50% 32%,#FBF6EE 0%,#EFE3CF 55%,#DCC7A6 100%)}
+@media (max-width:1000px){.grid{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:560px){.grid{grid-template-columns:1fr;max-width:360px}}
+</style>
+</head>
+<body>
+<h1>Section 3: photo options</h1>
+<p class="sub">Same frame for all. Only the photo and its background change. Pick 1, 2 or 3 (or keep the current one).</p>
+<div class="grid">
+  <div class="opt">
+    <b>Current</b>
+    <p>Original studio photo with its tan background.</p>
+    <div class="frame"><div class="card bg-studio"><img src="../assets/pd-7996-portrait.jpg" alt="Dr. Dharius Daniels, current photo"></div></div>
+  </div>
+  <div class="opt">
+    <b>Option 1 · Navy spotlight</b>
+    <p>Same photo, background removed. Deep navy with a soft spotlight, so the tan jacket stands out.</p>
+    <div class="frame"><div class="card bg-spot"><img src="../assets/pd-7996-cut-portrait.webp" alt="Dr. Dharius Daniels on navy spotlight"></div></div>
+  </div>
+  <div class="opt">
+    <b>Option 2 · Smiling, navy spotlight</b>
+    <p>Different photo: looking up with a big smile. Warmer and more charming, on the same navy spotlight.</p>
+    <div class="frame"><div class="card bg-spot"><img src="../assets/pd-7998-cut-portrait.webp" alt="Dr. Dharius Daniels smiling on navy spotlight"></div></div>
+  </div>
+  <div class="opt">
+    <b>Option 3 · Light cream</b>
+    <p>Same photo, background removed, on a light warm cream. A bright portrait inside the dark section.</p>
+    <div class="frame"><div class="card bg-cream"><img src="../assets/pd-7996-cut-portrait.webp" alt="Dr. Dharius Daniels on light cream"></div></div>
+  </div>
+</div>
+</body>
+</html>

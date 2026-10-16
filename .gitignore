@@ -1,0 +1,19 @@
+# Local tool output
+.playwright-mcp/
+__pycache__/
+*.pyc
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Internal / sensitive: kept on the working computer only, NEVER pushed (the GitHub repo is public)
+LINKS.md
+brain/00-internal-notes.md
+brain/01-client-profile.md
+brain/05-team-and-timeline.md
+brain/06-open-items.md
+reference/source-docs/README.md
+reference/source-docs/2026-10-16_team-brief_oct11.md
+reference/source-docs/2026-10-16_grant-funnel-copy.md
