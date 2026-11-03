@@ -24,6 +24,8 @@ reference/
   source-docs/               dated local snapshots of the briefs, copy, emails and bios
 funnels/
   relational-intelligence-masterclass/   the active funnel build
+  relational-intelligence-academy/       Academy sales page + checkout (GHL code, audit)
+  singles-os/                            one-page SinglesOS trademark landing page
 ```
 
 ## View the page designs

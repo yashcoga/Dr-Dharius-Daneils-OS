@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SinglesOS™ | Relationship Education for Singles</title>
+<meta name="description" content="SinglesOS™ offers relationship education for single adults: online courses, live virtual classes, workshops and coaching from Dr. Dharius and Coach Shameka Daniels.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 48'%3E%3Crect width='40' height='48' rx='6' fill='%230F1B2D'/%3E%3Cpath d='M9 41V21a11 11 0 0 1 22 0v20' fill='none' stroke='%23C9A86A' stroke-width='2.6'/%3E%3Ccircle cx='20' cy='22' r='4' fill='%23C9A86A'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --gold:#C9A86A; --gold-300:#E0C58A; --gold-600:#B08D55; --gold-ink:#7C6233;
+  --navy-900:#0B1424; --navy-800:#0F1B2D; --navy-700:#132340;
+  --cream:#F7F5F1; --ivory:#F3F1EC; --slate:#A9B6C9; --body-light:#5F6E76;
+  --serif:"Playfair Display",Georgia,serif; --sans:"Jost",system-ui,sans-serif;
+  --wrap:1160px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--cream);font:400 16px/1.6 var(--sans);color:#344054;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+h1,h2,h3{font-family:var(--serif);font-weight:500;margin:0;letter-spacing:-.01em;text-wrap:balance}
+p{margin:0 0 16px}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 32px}
+.eyebrow{display:inline-flex;align-items:center;gap:12px;font:600 11px/1.4 var(--sans);letter-spacing:.22em;text-transform:uppercase}
+.eyebrow::before,.eyebrow::after{content:"";width:28px;height:1px;background:currentColor;opacity:.55}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:56px;padding:0 36px;border-radius:2px;background:var(--gold);color:var(--navy-800);
+  font:600 12.5px/1 var(--sans);letter-spacing:.22em;text-transform:uppercase;text-decoration:none;box-shadow:0 10px 24px -14px rgba(201,168,106,.9);transition:transform .2s,background .2s}
+.btn:hover{transform:translateY(-1px);background:#D4B57A}
+
+/* Logo (text wordmark + arch mark) */
+.logo{display:inline-flex;align-items:center;gap:14px;text-decoration:none;color:var(--ivory)}
+.logo svg{flex:none}
+.logo .word{font:600 40px/1 var(--serif);letter-spacing:-.01em;white-space:nowrap}
+.logo .word b{font-weight:600;font-style:italic;color:var(--gold);margin-left:.04em}
+.logo sup{font:500 .32em/1 var(--sans);color:var(--gold-300);vertical-align:1.6em;margin-left:2px}
+.logo.sm .word{font-size:26px}
+
+/* Top bar */
+.topbar{background:var(--gold);color:var(--navy-800);text-align:center;font:600 11px/1.4 var(--sans);letter-spacing:.24em;text-transform:uppercase;padding:11px 16px}
+
+/* Hero */
+.hero{background:radial-gradient(60% 55% at 78% 40%,rgba(201,168,106,.14),transparent 70%),linear-gradient(var(--navy-700),var(--navy-800));color:#E6E9EE;padding:72px 0 88px}
+.hero-grid{display:grid;grid-template-columns:1.05fr 1fr;gap:64px;align-items:center}
+.hero .logo{margin-bottom:36px}
+.hero .eyebrow{color:var(--gold);margin-bottom:18px}
+.hero h1{font-size:46px;line-height:1.12;color:var(--ivory);margin-bottom:22px}
+.hero h1 em{display:block;font-style:italic;color:var(--gold)}
+.hero .sub{font:500 18px/1.5 var(--sans);color:var(--ivory);margin-bottom:12px}
+.hero .lede{font-size:16.5px;line-height:1.7;font-weight:300;color:var(--slate);max-width:540px;margin-bottom:32px}
+
+.hosts{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.host{margin:0}
+.arch{position:relative;aspect-ratio:4/5;border-radius:999px 999px 4px 4px;overflow:hidden;background:#B9906A;
+  box-shadow:0 0 0 1px rgba(201,168,106,.55),0 0 0 7px var(--navy-800),0 0 0 8px rgba(201,168,106,.35),0 30px 50px -28px rgba(0,0,0,.8)}
+.arch img{width:100%;height:100%;object-fit:cover}
+.host figcaption{text-align:center;margin-top:22px}
+.host figcaption b{display:block;font:italic 500 21px/1.25 var(--serif);color:var(--ivory)}
+.host figcaption span{display:block;font:600 10px/1.6 var(--sans);letter-spacing:.22em;text-transform:uppercase;color:var(--gold-300);margin-top:4px}
+
+/* Offer */
+.offer{padding:88px 0}
+.offer .head{text-align:center;max-width:760px;margin:0 auto 48px}
+.offer .eyebrow{color:var(--gold-ink);margin-bottom:16px}
+.offer h2{font-size:44px;line-height:1.1;color:var(--navy-800);font-weight:600}
+.offer h2 em{display:block;font-style:italic;font-weight:500;color:var(--gold-600)}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{background:#fff;border:1px solid #E6E1D8;border-radius:2px;padding:32px 28px}
+.num{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:50%;border:1px solid var(--gold);font:italic 500 17px/1 var(--serif);color:var(--gold-600);margin-bottom:18px}
+.card h3{font-size:24px;font-weight:600;color:var(--navy-800);margin-bottom:8px}
+.card p{margin:0;color:var(--body-light);font-size:15.5px;line-height:1.65}
+.services{margin:40px auto 0;max-width:860px;text-align:center;border-top:1px solid rgba(176,141,85,.4);padding-top:32px}
+.services p{font-size:16.5px;line-height:1.7;color:#344054;margin:0}
+.services strong{color:var(--navy-800);font-weight:500}
+.chips{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-top:20px;padding:0;list-style:none}
+.chips li{font:600 10.5px/1 var(--sans);letter-spacing:.18em;text-transform:uppercase;color:var(--gold-ink);border:1px solid rgba(176,141,85,.5);padding:10px 14px;border-radius:2px}
+
+/* About */
+.about{background:var(--navy-800);color:#E6E9EE;padding:80px 0}
+.about .head{text-align:center;margin-bottom:40px}
+.about .eyebrow{color:var(--gold);margin-bottom:14px}
+.about h2{font-size:38px;line-height:1.15;color:var(--ivory)}
+.about h2 em{font-style:italic;color:var(--gold)}
+.bios{display:grid;grid-template-columns:1fr 1fr;gap:20px;max-width:960px;margin:0 auto}
+.bio{background:rgba(19,35,64,.72);border:1px solid rgba(255,255,255,.09);border-radius:2px;padding:28px 30px}
+.bio h3{font-size:22px;color:var(--ivory);margin-bottom:10px}
+.bio p{margin:0;color:var(--slate);font-size:15.5px;line-height:1.7;font-weight:300}
+.bio em{color:#E6E9EE}
+.about .cta{text-align:center;margin-top:44px}
+
+/* Footer */
+footer{background:var(--navy-900);color:#8FA2BD;padding:48px 0 40px;text-align:center;font-size:13px;line-height:1.7}
+footer .logo{margin-bottom:18px}
+footer p{margin:0 0 6px}
+footer .tm{color:#C9D2DF}
+
+@media (max-width:960px){
+  .hero{padding:56px 0 72px}
+  .hero-grid{grid-template-columns:1fr;gap:48px}
+  .hero h1{font-size:38px}
+  .hosts{max-width:520px;margin:0 auto;width:100%}
+  .cards{grid-template-columns:1fr}
+  .offer h2{font-size:36px}
+  .bios{grid-template-columns:1fr}
+}
+@media (max-width:560px){
+  .wrap{padding:0 16px}
+  .topbar{font-size:10px;letter-spacing:.18em}
+  .hero .eyebrow::before,.hero .eyebrow::after{display:none}
+  .hero{padding:40px 0 56px}
+  .hero .logo{margin-bottom:28px}
+  .logo .word{font-size:34px}
+  .logo.sm .word{font-size:24px}
+  .hero h1{font-size:31px}
+  .hero .sub{font-size:17px}
+  .btn{width:100%}
+  .hosts{gap:14px}
+  .arch{box-shadow:0 0 0 1px rgba(201,168,106,.55),0 0 0 5px var(--navy-800),0 0 0 6px rgba(201,168,106,.35)}
+  .host figcaption{margin-top:16px}
+  .host figcaption b{font-size:17px}
+  .host figcaption span{font-size:9px;letter-spacing:.16em}
+  .offer{padding:64px 0}
+  .offer h2{font-size:30px}
+  .card{padding:26px 22px}
+  .about{padding:64px 0}
+  .about h2{font-size:30px}
+  .bio{padding:24px 22px}
+}
+</style>
+</head>
+<body>
+
+<div class="topbar">From the creators of Couples OS</div>
+
+<header class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <a class="logo" href="#top" aria-label="SinglesOS">
+        <svg width="40" height="48" viewBox="0 0 40 48" aria-hidden="true"><path d="M7 46V20a13 13 0 0 1 26 0v26" fill="none" stroke="#C9A86A" stroke-width="2"/><path d="M2 46h36" stroke="#C9A86A" stroke-width="2"/><circle cx="20" cy="21" r="4.2" fill="#C9A86A"/></svg>
+        <span class="word">Singles<b>OS</b><sup>™</sup></span>
+      </a>
+      <div class="eyebrow">Relationship education for singles</div>
+      <h1>Single Isn't a Waiting Room. <em>It's Where You Build What Comes Next.</em></h1>
+      <p class="sub">From Dr. Dharius and Coach Shameka Daniels.</p>
+      <p class="lede">SinglesOS™ helps single adults get clear on who they are, what they want and how they choose the people they let close, so the next relationship is built on purpose, not pressure.</p>
+      <a class="btn" href="#offer">Explore SinglesOS</a>
+    </div>
+
+    <div class="hosts">
+      <figure class="host">
+        <div class="arch"><picture><source srcset="assets/dharius.webp" type="image/webp"><img src="assets/dharius.jpg" alt="Dr. Dharius Daniels" width="720" height="900"></picture></div>
+        <figcaption><b>Dr. Dharius Daniels</b><span>Author &amp; Coach</span></figcaption>
+      </figure>
+      <figure class="host">
+        <div class="arch"><picture><source srcset="assets/shameka.webp" type="image/webp"><img src="assets/shameka.jpg" alt="Coach Shameka Daniels" width="720" height="900"></picture></div>
+        <figcaption><b>Coach Shameka Daniels</b><span>Personal Development Coach</span></figcaption>
+      </figure>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="offer" id="offer">
+    <div class="wrap">
+      <div class="head">
+        <div class="eyebrow">Inside SinglesOS</div>
+        <h2>Relationship Education <em>for Single Adults.</em></h2>
+      </div>
+
+      <div class="cards">
+        <article class="card">
+          <span class="num">01</span>
+          <h3>Know Yourself</h3>
+          <p>Your values, your patterns and what you bring to a relationship.</p>
+        </article>
+        <article class="card">
+          <span class="num">02</span>
+          <h3>Choose Wisely</h3>
+          <p>How to tell the difference between chemistry and character.</p>
+        </article>
+        <article class="card">
+          <span class="num">03</span>
+          <h3>Build With Purpose</h3>
+          <p>Habits and boundaries that carry into the relationship you want.</p>
+        </article>
+      </div>
+
+      <div class="services">
+        <p><strong>SinglesOS™</strong> offers online courses, live virtual classes, workshops, events and coaching programs in relationship education and personal development for single adults.</p>
+        <ul class="chips" aria-label="SinglesOS services">
+          <li>Online Courses</li><li>Live Virtual Classes</li><li>Workshops &amp; Events</li><li>Coaching Programs</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="about">
+    <div class="wrap">
+      <div class="head">
+        <div class="eyebrow">Meet your hosts</div>
+        <h2>The team behind Couples OS, <em>now building for singles.</em></h2>
+      </div>
+      <div class="bios">
+        <div class="bio">
+          <h3>Dr. Dharius Daniels</h3>
+          <p>Author of <em>Relational Intelligence</em> and a certified emotional intelligence specialist, with postgraduate degrees from Princeton and Fuller and more than 20 years of leadership.</p>
+        </div>
+        <div class="bio">
+          <h3>Coach Shameka Daniels</h3>
+          <p>Marriage and personal development coach with a Master's in Health &amp; Human Counseling, a certified Grief Recovery Specialist and a certified John C. Maxwell coach.</p>
+        </div>
+      </div>
+      <div class="cta"><a class="btn" href="#offer">Explore SinglesOS</a></div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <a class="logo sm" href="#top" aria-label="SinglesOS">
+      <svg width="28" height="34" viewBox="0 0 40 48" aria-hidden="true"><path d="M7 46V20a13 13 0 0 1 26 0v26" fill="none" stroke="#C9A86A" stroke-width="2.4"/><path d="M2 46h36" stroke="#C9A86A" stroke-width="2.4"/><circle cx="20" cy="21" r="4.2" fill="#C9A86A"/></svg>
+      <span class="word">Singles<b>OS</b><sup>™</sup></span>
+    </a>
+    <p class="tm">SinglesOS™ is a trademark of its owner. All rights reserved.</p>
+    <p>SinglesOS is relationship education, not therapy or counseling.</p>
+    <p>© 2026 SinglesOS</p>
+  </div>
+</footer>
+
+</body>
+</html>
