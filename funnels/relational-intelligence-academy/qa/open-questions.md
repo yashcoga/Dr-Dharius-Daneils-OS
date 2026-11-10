@@ -7,22 +7,6 @@ Code: `ghl/AcademySalesPage-ghl.html`
 
 ## Parked
 
-1. **[OPTIONS]: pay-later companies** (shown 3 times: under both "Your Investment Today: $997" boxes, and above the bonus-section button)
-   - Text: "Buy now, pay later options at checkout, like [OPTIONS]"
-   - Question: Which pay-later companies are switched on at checkout (for example Klarna, Afterpay, Affirm)? If none, we remove the line.
-   - Status: waiting on details.
-
-2. **[REASON FOR THE DEADLINE]** (urgency section)
-   - Text: "Enrollment closes November 16 at 11:59 AM ET [REASON FOR THE DEADLINE]. When enrollment closes, the doors stay closed until the next group."
-   - Question: What's the real reason enrollment closes on November 16?
-   - Also confirm: is it 11:59 **AM** or **PM** ET?
-   - Status: parked.
-
-3. **[TIME PER WEEK]** (FAQ section)
-   - Text: "How much time does it take each week? [TIME PER WEEK]."
-   - Question: About how many hours a week does the program take (for example "About 1–2 hours a week")?
-   - Status: parked.
-
 4. **Coaching call schedule** (welcome page, step 2)
    - Text: "Live coaching calls are on November 17, November 24, December 3, December 10, December 15 and December 17."
    - Question: Are these the right dates, and what time is each call? They switch between Tuesday and Thursday, and there are 2 calls in the week of Dec 14 but none in the week of Dec 1. The sales page mock-up says "Thursday · 8 PM ET".
@@ -45,6 +29,36 @@ Code: `ghl/AcademySalesPage-ghl.html`
    - Question: Is Dr. Daniels happy with "ministry" in the list of relationships?
    - Status: parked.
 
+## Added Nov 3 (live /academy page review)
+
+Full feedback: `academy-optin-feedback.html` and the matching PDF. Items 6–8 above are still open on the live page (2-pay not linked, "ministry" still in the FAQ).
+
+9. **Live call time zone** (laptop mockup vs share image)
+   - The page mockup says "Thursday · 8 PM **ET**"; the share image says "Thursday · 8 PM **CT**". Nov 17 is a Tuesday, so if calls are Thursdays the first call is Nov 19. Which is right? (Ties to item 4.)
+10. **Repositioning Clinic date** (Bonus 9): when is the group session?
+11. **Company name in the footer**: the footer says "© 2026 Dr. Dharius Daniels"; the legal pages and SMS consent say "Relationship Operating System, LLC". Which entity?
+12. **Tracking**: no Meta pixel or Google tag loads on /academy. Is tracking planned?
+13. **Tone (for Dr. Daniels)**: keep "Managing Separation and Elimination" (Week 6) and "the three relationships costing you the most" (Week 1)?
+14. **Testimonials**: any approved quotes from masterclass attendees, readers or coaching members?
+
+## For the developer (config.php on aibotxpert.com), added Nov 10
+
+Do this before the new checkout code goes live.
+
+| Offer | Plan ID | Page |
+|---|---|---|
+| `full` | `plan_7YN2PaFTNCgQs` | /academy-checkout ($597) |
+| `twopay` | `plan_nbXH8fSLIXs6K` | /academy-checkout-2-pay (2 x $327) |
+| Certification upsell (`upsell.php`) | `plan_o8dmQjp7oYiuK` | /certification-upgrade-1 ($1,000, one-time) |
+
+- Replace the test plans if they are still set (`plan_Stepb8xJSmTdv`, `plan_ruVNCWeF1ZHIB`).
+- Confirm the server is using the live Whop account, not test mode.
+
 ## Resolved (not for the PDF)
+
+- **[OPTIONS]** (Michael, Nov 3): "ClarityPay and Sezzle". Klarna and AfterPay may be added later; Michael will confirm.
+- **[REASON FOR THE DEADLINE]** (Michael, Nov 3): "We have orientation for new members that week."
+- **[TIME PER WEEK]** (Michael, Nov 3): "1 to 2 hours per week."
+- These three are live on /academy and in `design/academy-sales.html`.
 
 - **[SUPPORT EMAIL]**: use info@workwiththedaniels.com (same as the legal pages). The funnel designer is adding it.

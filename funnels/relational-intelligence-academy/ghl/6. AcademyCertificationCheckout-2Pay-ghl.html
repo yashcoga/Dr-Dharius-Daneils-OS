@@ -1,3 +1,16 @@
+<!--
+PAGE: Academy + RI Certification Checkout - 2 Pay (workwiththedaniels.com/academy-certification-checkout-2-pay)
+UPDATE LOG: add an entry at the top of the list every time you change this page. Newest first.
+Format: YYYY-MM-DD HH:MM IST | Your name, then short pointers for what changed
+2026-11-10 18:51 IST | Yash
+  - Product box title no longer breaks mid-word on desktop ("Certifica / tion"); "one-time" stays together
+2026-11-10 17:37 IST | Yash
+  - New page, built from academy-checkout with the copy from the Nov 10 funnel changes doc (section 4)
+  - 2 x $827 (2nd payment in 30 days); Whop plan plan_1caYaHqkoem0W; no buy now, pay later line
+  - The 2 lines under the product name: left-aligned list, checkmarks lined up; "One-Day" and "+ RI Certification" never split across lines; headline a bit smaller on small phones
+  - Fine print under the checkout (replaces the "All sales are final" bar) + "not a license" line in the footer disclaimer
+  - No lone word on the last line of any text (desktop + mobile)
+-->
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preload" href="https://fonts.gstatic.com/s/montserrat/v31/JTUSjIg1_i6t8kCHKm459Wlhyw.woff2" as="font" type="font/woff2" crossorigin>
 <style>
@@ -14,7 +27,7 @@ html,body,#preview-container,.hl_page-preview--content{background:#050A14 !impor
   --gold:#D9B46A; --gold-hi:#F2D38F; --gold-lo:#A9864C; --glow:rgba(217,180,106,.55);
   --white:#FFFFFF; --text:#C9D2DF; --muted:#8C99AD; --ink:#0B1424; --paper:#FFFFFF; --field:#F4F5F7; --field-line:#D5DAE1;
   --ph-bg:#FFF1BF; --ph-fg:#6E5200; --ph-line:#D7B13F;
-  --sans:"Montserrat",system-ui,-apple-system,"Segoe UI",Arial,sans-serif;
+  --sans:"Montserrat","Montserrat FB",system-ui,-apple-system,"Segoe UI",Arial,sans-serif;
   color-scheme:dark;
 }
 *,*::before,*::after{box-sizing:border-box}
@@ -302,58 +315,106 @@ h2{font:800 clamp(28px,4.4vw,42px)/1.15 var(--sans);text-align:center;letter-spa
 .co-card .whop-box{min-height:520px}
 .co-hero h1{font-size:clamp(30px,5vw,54px)!important}
 @media (max-width:960px){.co-hero .offer-row .left{order:2}}
+/* stand-in while Montserrat loads: Arial sized to Montserrat's width, so lines break the same and nothing moves when it swaps */
+@font-face{font-family:'Montserrat FB';font-weight:100 500;src:local('Arial'),local('ArialMT'),local('Liberation Sans'),local('LiberationSans'),local('Arimo'),local('Helvetica');size-adjust:116%;ascent-override:83%;descent-override:22%;line-gap-override:0%}
+@font-face{font-family:'Montserrat FB';font-weight:600;src:local('Arial Bold'),local('Arial-BoldMT'),local('Liberation Sans Bold'),local('LiberationSans-Bold'),local('Arimo Bold'),local('Helvetica Bold'),local('Helvetica-Bold');size-adjust:105%;ascent-override:92%;descent-override:24%;line-gap-override:0%}
+@font-face{font-family:'Montserrat FB';font-weight:700;src:local('Arial Bold'),local('Arial-BoldMT'),local('Liberation Sans Bold'),local('LiberationSans-Bold'),local('Arimo Bold'),local('Helvetica Bold'),local('Helvetica-Bold');size-adjust:114%;ascent-override:85%;descent-override:22%;line-gap-override:0%}
+@font-face{font-family:'Montserrat FB';font-weight:800 900;src:local('Arial Bold'),local('Arial-BoldMT'),local('Liberation Sans Bold'),local('LiberationSans-Bold'),local('Arimo Bold'),local('Helvetica Bold'),local('Helvetica-Bold');size-adjust:108%;ascent-override:90%;descent-override:23%;line-gap-override:0%}
+/* keep the scrollbar's space from the start, so adding the rest of the page doesn't nudge everything sideways */
+html{scrollbar-gutter:stable}
+/* sections below the first screen are laid out as the visitor scrolls near them (not the offer columns: this
+   clips whatever sticks out past them, like the checkout card's "Step 2 of 2" pill and the bundle's glow) */
+.hero .trust,main>section,.foot{content-visibility:auto;contain-intrinsic-size:auto 900px}
+.pill .star{width:.95em;height:.95em;fill:currentColor;stroke:none}
+.one .offer-box .inc,.offer-box .inc{text-align:left}
+/* enrollment timer under the intro (Michael, Nov 5: "on checkout pages, can we add timers"); hidden until the
+   script fills in the numbers, so it never shows 00 */
+.co-timer{margin:6px auto 0;text-align:center}
+.co-timer:not(.on){visibility:hidden}
+.co-timer-lbl{font:700 12px/1.4 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin:0}
+/* only the boxes are 420px wide; the line above uses the full width, so "ET" stays next to the time */
+.co-timer .big-cd{max-width:420px;margin:10px auto 0}
+
+.co-fine{margin:14px 0 0;text-align:center;font:500 12.5px/1.55 var(--sans);color:#5B6574}
+.offer-box .inc-pair{display:grid;gap:12px;justify-items:start;width:fit-content;max-width:min(100%,440px);margin:18px auto 28px;text-align:left}
+.offer-box .inc-pair .inc{display:flex;align-items:flex-start;gap:12px;margin:0;font:700 16px/1.4 var(--sans)}
+.offer-box .inc-pair .chk{margin-top:1px}
+.offer-box h3{overflow-wrap:normal;word-break:normal}
+@media (max-width:400px){.co-hero h1{font-size:27px!important}}
+
+/* no lone word on the last line of any text */
+h1,h2,h3,h4,.tag,.o-head span,.inc,.sm{text-wrap:balance}
+p,li{text-wrap:pretty}
 </style>
 
 <header class="hero co-hero">
   <img class="hero-bgphoto" src="https://assets.cdn.filesafe.space/k7y62CGW1oocU5b1V8r2/media/6ae208912ee9359cb0285c93.webp" alt="" width="640" height="959">
   <div class="wrap">
-    <div class="intro"><div class="hero-m"><img src="https://assets.cdn.filesafe.space/k7y62CGW1oocU5b1V8r2/media/6ad5c4bf989628c77a74fcfe.webp" alt="Dr. Dharius Daniels" width="640" height="959"></div><span class="pill">&#10022; You're almost in</span><h1>Relational Intelligence <span class="g">Academy</span></h1>
-      <p class="tag">Complete your enrollment below.</p></div>
-    <div class="offer-row">
-  <div class="left"><img class="bundle-img" src="https://assets.cdn.filesafe.space/k7y62CGW1oocU5b1V8r2/media/6ae218f7d542268bb48af59b.webp" alt="Everything inside the Relational Intelligence Academy" width="1600" height="714" fetchpriority="high">
-    <div class="offer-box"><h3>Relational Intelligence Academy</h3>
-      <div class="inc"><span class="chk"><svg class="svg" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span>6 weeks live with Dr. Daniels + AI agent</div>
-      <h4>When You Join Today</h4><ul class="bl"><li><span>Bonus:</span> The Relational Intelligence AI Agent</li><li><span>Bonus:</span> The Relational Equity Scorecard</li><li><span>Bonus:</span> The Difficult Conversations Script Vault</li><li><span>Bonus:</span> The Stay, Shift, or Separate Decision Guide</li><li><span>Bonus:</span> The 30-Day Relational Reset</li><li><span>Bonus:</span> The Boundary Builder Toolkit</li><li><span>Bonus:</span> The Relational Intelligence Case Study Lab</li><li><span>Bonus:</span> The Guilt-Free Boundaries Mini-Course</li><li><span>Bonus:</span> The Relational Repositioning Clinic</li><li><span>Bonus:</span> Disarming Your Emotional Snipers</li></ul>
-      <div class="today">Today, Just <span>$997</span></div><div class="sm">(one-time payment)</div></div></div>
+    <div class="intro"><div class="hero-m"><img src="https://assets.cdn.filesafe.space/k7y62CGW1oocU5b1V8r2/media/6ae2539d617c909435d597aa.webp" alt="Dr. Dharius Daniels" width="600" height="900"></div><span class="pill"><svg class="svg star" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1.5l2.6 7.9 7.9 2.6-7.9 2.6-2.6 7.9-2.6-7.9-7.9-2.6 7.9-2.6z"/></svg> You're almost in</span><h1>Relational Intelligence Academy <span class="g">+&nbsp;RI&nbsp;Certification</span></h1>
+      <p class="tag">Complete Your Enrollment&nbsp;Below</p></div>
+    <template data-later><div class="co-timer"><p class="co-timer-lbl">Enrollment closes November 16th at&nbsp;11:59&nbsp;PM&nbsp;PST</p><div class="big-cd" data-cd><div><b data-d>00</b><small>Days</small></div><div><b data-h>00</b><small>Hours</small></div><div><b data-m>00</b><small>Mins</small></div></div></div><div class="offer-row">
+  <div class="left"><img class="bundle-img" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 714'/%3E" data-src="https://images.leadconnectorhq.com/image/f_webp/q_80/r_1600/u_https://assets.cdn.filesafe.space/k7y62CGW1oocU5b1V8r2/media/6aeb8c9da3c1bfa45ec156ee.png" alt="Everything inside the Relational Intelligence Academy" width="1600" height="714">
+    <div class="offer-box"><h3>Relational Intelligence Academy&nbsp;+ RI&nbsp;Certification</h3>
+      <div class="inc-pair"><div class="inc"><span class="chk"><svg class="svg" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span>The 30-Day Intensive: 6 Live Sessions + AI&nbsp;Agent</div><div class="inc"><span class="chk"><svg class="svg" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span>The Relational Intelligence Certification + One&#8209;Day Live Certification Event&nbsp;in&nbsp;Atlanta</div></div>
+      <h4>When You Join&nbsp;Today</h4><ul class="bl"><li><span>Bonus:</span> The Relational Intelligence AI&nbsp;Agent</li><li><span>Bonus:</span> The Relational Equity&nbsp;Scorecard</li><li><span>Bonus:</span> The Difficult Conversations Script&nbsp;Vault</li><li><span>Bonus:</span> The Stay, Shift, or Separate Decision&nbsp;Guide</li><li><span>Bonus:</span> The 30-Day Relational&nbsp;Reset</li><li><span>Bonus:</span> The Boundary Builder&nbsp;Toolkit</li><li><span>Bonus:</span> The Relational Intelligence Case Study&nbsp;Lab</li><li><span>Bonus:</span> The Guilt-Free Boundaries&nbsp;Mini-Course</li><li><span>Bonus:</span> The Relational Repositioning&nbsp;Clinic</li><li><span>Bonus:</span> Disarming Your Emotional&nbsp;Snipers</li></ul>
+      <div class="today">Today&hellip;Just <span>$827</span></div><div class="sm">(2 payments of&nbsp;$827)</div></div></div>
   <div>
     <div class="order co-card" aria-label="Secure checkout">
       <span class="save">Step 2 of 2 &middot; Secure checkout</span>
-      <div class="o-head"><b>Complete Your Enrollment</b><span>Pay in full &middot; $997</span></div>
+      <div class="o-head"><b>Complete Your Enrollment</b><span>$827 today, then 1 more payment of $827 in 30&nbsp;days</span></div>
       <div class="o-body">
         <div class="whop-box">
-          <div id="whop-embedded-checkout" data-plan="plan_eKZ2clXrXLzYo"><p class="co-wait" data-wait>Loading secure checkout&hellip;</p></div>
+          <div id="whop-embedded-checkout" data-plan="plan_1caYaHqkoem0W"><p class="co-wait" data-wait>Loading secure&nbsp;checkout&hellip;</p></div>
         </div>
-        <p class="bnpl">Buy now, pay later options at checkout, like <span class="ph">[OPTIONS]</span>. Approval is up to the provider.</p>
-        <div class="note-bar">All sales are final &middot; Six weeks of real work</div>
-        <div class="secure"><svg class="svg" viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>Secure checkout</div>
+        <p class="co-fine">Certification access opens after the Academy ends on December 17th. The Atlanta event date will be announced in 2027, and travel and lodging are not included. All sales are&nbsp;final.</p>
+        <div class="secure"><svg class="svg" viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>Secure&nbsp;checkout</div>
       </div>
     </div></div>
 </div>
+</template>
   </div>
 </header>
-<footer class="foot">
+<template data-later><footer class="foot">
   <div class="wrap">
-    <p>The Relational Intelligence Academy is coaching and education. It is not therapy, counseling, or medical or mental health treatment. Results vary based on individual effort and circumstances. If you are experiencing abuse, a mental health crisis, or thoughts of self-harm, contact a licensed professional or call or text 988. In immediate danger, call 911. National Domestic Violence Hotline: 1-800-799-7233.</p>
+    <p>The Relational Intelligence Academy is coaching and education. It is not therapy, counseling, or medical or mental health treatment. Results vary based on individual effort and circumstances. If you are experiencing abuse, a mental health crisis, or thoughts of self-harm, contact a licensed professional or call or text 988. In immediate danger, call 911. National Domestic Violence Hotline: 1-800-799-7233. The Relational Intelligence Certification is not a&nbsp;license.</p>
     <p class="lk"><a href="https://relationalintelligenceclass.com/privacy-policy">PRIVACY POLICY</a><span>|</span><a href="https://relationalintelligenceclass.com/terms-and-conditions">TERMS AND CONDITIONS</a><span>|</span><a href="https://relationalintelligenceclass.com/refund-policy">REFUND AND CANCELLATION POLICY</a><span>|</span><a href="https://relationalintelligenceclass.com/education-and-ai-disclaimer">EDUCATIONAL AND AI DISCLAIMER</a><span>|</span><a href="https://relationalintelligenceclass.com/sms-terms">SMS TERMS</a></p>
-    <p>&copy; 2026 Dr. Dharius Daniels</p>
+    <p>&copy; 2026 Dr. Dharius&nbsp;Daniels</p>
   </div>
 </footer>
+</template>
 <script src="https://cdn.whop.com/elements/amber/elements.js" data-whop-elements></script>
 <script>
-  // Whop checkout (pay in full). After payment Whop sends buyers to the redirect set on the plan in Whop.
   (function mount(n){ var box=document.getElementById('whop-embedded-checkout');
-    if(!window.WhopElements){ if(n<40) return setTimeout(function(){mount(n+1);},250); return; }
+    if(!window.WhopElements || !box){ if(n<40) return setTimeout(function(){mount(n+1);},250); return; }
     box.innerHTML=''; var checkout=window.WhopElements().checkout.create({ plan: box.dataset.plan }); checkout.create('checkout').mount('#whop-embedded-checkout'); })(0);
 </script>
 <script>
 (function(){
-  var end=Date.parse('2026-11-16T11:59:00-05:00');
+  var parts=document.querySelectorAll('template[data-later]');
+  function later(){
+    parts[0].replaceWith(parts[0].content);
+    requestAnimationFrame(function(){ setTimeout(function(){
+      parts[1].replaceWith(parts[1].content);
+(function(){
+  var imgs=document.querySelectorAll('img[data-src]');
+  function load(i){ i.src=i.dataset.src; i.removeAttribute('data-src'); }
+  if(!('IntersectionObserver' in window)){ imgs.forEach(load); return; }
+  var io=new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ io.unobserve(e.target); load(e.target); } }); },{rootMargin:'600px 0px'});
+  imgs.forEach(function(i){ io.observe(i); });
+})();
+(function(){
+  var end=Date.parse('2026-11-16T23:59:00-08:00');
   function pad(n){return (n<10?'0':'')+n;}
   function tick(){var t=Math.max(0,end-Date.now()),d=Math.floor(t/864e5),h=Math.floor(t%864e5/36e5),m=Math.floor(t%36e5/6e4);
-    document.querySelectorAll('[data-cd]').forEach(function(el){el.querySelector('[data-d]').textContent=d+'d';el.querySelector('[data-h]').textContent=pad(h)+'h';el.querySelector('[data-m]').textContent=pad(m)+'m';});}
+    document.querySelectorAll('[data-cd]').forEach(function(el){el.querySelector('[data-d]').textContent=pad(d);el.querySelector('[data-h]').textContent=pad(h);el.querySelector('[data-m]').textContent=pad(m);});
+    document.querySelectorAll('.co-timer').forEach(function(el){el.classList.add('on');});}
   tick(); setInterval(tick,30000);
-  // If the Whop script cannot load here (preview), say where the checkout appears
   setTimeout(function(){ var w=document.querySelector('[data-wait]'); var box=document.getElementById('whop-embedded-checkout');
     if(w && box && !box.querySelector('iframe')) w.textContent='Secure checkout is loading. If it does not appear, please refresh the page.'; },6000);
+})();
+    }, 0); });
+  }
+  var fonts=document.fonts&&document.fonts.load?document.fonts.load('400 16px Montserrat'):Promise.resolve();
+  Promise.race([fonts,new Promise(function(r){ setTimeout(r,2000); })]).then(function(){ requestAnimationFrame(function(){ setTimeout(later, 0); }); });
 })();
 </script>

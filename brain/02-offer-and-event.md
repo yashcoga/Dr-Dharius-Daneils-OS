@@ -1,11 +1,27 @@
 # Offer and Event: Relational Intelligence (RI) November Launch
 
-Last updated: 2026-10-16. Sources: team brief (Oct 11), funnel copy, email doc, Slack #cog-funnels (Oct 13).
+Last updated: 2026-11-10. Sources: team brief (Oct 11), funnel copy, email doc, Slack #cog-funnels (Oct 13), client doc "Funnel Changes for the Relational Intelligence Academy + RI Certification" (`files/`, Nov 10).
 Status key: ✅ confirmed · 🟡 drafted, awaiting PD review · ⛔ not decided (use placeholders and never invent).
 
 ## Positioning
 
 PD built this experience around his book. **RI is separate from Couples OS**: it is for individuals, is not a church program and is not a certification. (Internal launch background is in `00-internal-notes.md`, kept locally.)
+
+## Two options after the masterclass ✅ (client doc, 2026-11-10)
+
+This supersedes older lines below that say RI "is not a certification".
+
+| Option | Price | Payment plan |
+|---|---|---|
+| Relational Intelligence Academy | $597 one-time | 2 payments of $327 (2nd charged 15 days after the 1st) |
+| Relational Intelligence Academy + RI Certification | $1,597 one-time | 2 payments of $827 (2nd charged 30 days after the 1st) |
+
+- Buy now, pay later (ClarityPay, Sezzle, Klarna) is offered on **pay-in-full checkouts** only; approval is up to the provider.
+- The certification upsell page is scrapped. Every checkout goes straight to its welcome page.
+- Certification includes: the RI Certification course (frameworks, case studies, keynotes, coaching models), a one-day live certification event in Atlanta (also streamed), and certification in Relational Intelligence on completion. Two tracks: Personal and Professional.
+- Fine print to keep with it: Academy first; certification access opens after the Academy ends **December 17th**; Atlanta date announced in 2027; travel and lodging not included; **the certification is not a license** and doesn't qualify anyone to provide therapy or counseling.
+- Price framing approved by the client: "This certification has sold for $5,000. When you join the Academy, you can add it for $1,000 more."
+- Live sessions are about **75 minutes**.
 
 ## The free masterclass ✅
 
@@ -103,6 +119,6 @@ Paid ads + approved organic promotion → **free registration (A/B/C)** → **op
 ## Customer service facts
 
 - Three distinct experiences: free masterclass, $47 Prep Kit and the paid program. **Registering does not enroll anyone in the program.**
-- **Never promise:** private PD access, guaranteed answers to individual questions, an AI tool, certification, unconfirmed bonuses, or outcomes for how other people will respond.
+- **Never promise:** private PD access, guaranteed answers to individual questions, an AI tool, unconfirmed bonuses, or outcomes for how other people will respond. Certification only as described in "Two options after the masterclass" above (never as a license, never with earnings promises).
 - PD **rejected a results guarantee**. That does **not** mean a no-refund policy for the program; that policy is still pending.
 - The Prep Kit refund is 30 days, by email to `[SUPPORT EMAIL]`.

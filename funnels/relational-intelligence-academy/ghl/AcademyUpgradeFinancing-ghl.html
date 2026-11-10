@@ -1,0 +1,11 @@
+<div id="checkout"></div>
+
+<p class="no-thanks"><a href="https://workwiththedaniels.com/academy-welcome">No thanks, skip this offer</a></p>
+<script src="https://cdn.whop.com/elements/amber/elements.js" data-whop-elements></script>
+<script type="module">
+  const checkout = window.WhopElements().checkout.create({
+    plan: "plan_ZZ0BI9WazJrg5",
+    returnUrl: "https://workwiththedaniels.com/academy-welcome",
+  });
+  checkout.create("checkout").mount("#checkout");
+</script>

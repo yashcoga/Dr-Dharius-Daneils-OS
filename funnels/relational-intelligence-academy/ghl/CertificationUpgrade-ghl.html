@@ -1,0 +1,100 @@
+<style>
+  #loader { display:none; position:fixed; inset:0; background:rgba(255,255,255,.9); z-index:99999;
+    align-items:center; justify-content:center; flex-direction:column; font-family:sans-serif; }
+  #loader.show { display:flex; }
+  #loader .spinner { width:48px; height:48px; border:5px solid #ddd; border-top-color:#111;
+    border-radius:50%; animation:spin .8s linear infinite; }
+  #loader p { margin-top:16px; font-size:16px; color:#111; text-align:center; padding:0 16px; }
+  @keyframes spin { to { transform:rotate(360deg); } }
+</style>
+
+<div id="loader" class="show">
+  <div class="spinner"></div>
+  <p id="loader-text">Confirming your payment. Please don't close or refresh this page.</p>
+</div>
+
+<div id="offer" style="display:none">
+  <h2>Add your upgrade for $1.00</h2>
+  <button id="yes">Yes, add it to my order</button>
+  <p><a id="no" href="#">No thanks</a></p>
+  <p id="msg" role="alert" style="color:red"></p>
+</div>
+
+<script type="module">
+  const SERVER = "https://aibotxpert.com";
+  // the checkout says which page it is (single-pay or 2-pay), so a failed payment goes back to the right one
+  const cameFrom = new URLSearchParams(location.search).get("from");
+  const CHECKOUT_URL = "https://workwiththedaniels.com" + (cameFrom && cameFrom.startsWith("/") ? cameFrom : "/academy-checkout");
+  const THANK_YOU_URL = "https://workwiththedaniels.com/academy-welcome";
+  const FINANCING_OFFER_URL = "https://workwiththedaniels.com/academy-upgrade-finacing-1";
+  const PENDING_URL = "https://workwiththedaniels.com/academy-pending";
+  const DELAY_MS = 5 * 60 * 1000;   // time before the offer appears
+
+  const loader = document.querySelector("#loader");
+  const loaderText = document.querySelector("#loader-text");
+  const showLoader = (t) => { if (t) loaderText.textContent = t; loader.classList.add("show"); };
+  const hideLoader = () => loader.classList.remove("show");
+
+  const params = new URLSearchParams(location.search);
+  const orderId = params.get("order");
+  const status = params.get("status");
+  document.querySelector("#no").href = THANK_YOU_URL;
+
+  if (!orderId || status === "failed" || status === "canceled") {
+    location.replace(CHECKOUT_URL + "?payment=failed");
+    throw new Error("payment not completed");
+  }
+
+  async function check() {
+    const res = await fetch(`${SERVER}/check.php?order=${encodeURIComponent(orderId)}`);
+    return res.json();
+  }
+
+  let result = { paid: false, cardSaved: false };
+  for (let i = 0; i < 12; i++) {
+    try { result = await check(); } catch (e) {}
+    if (result.paid) break;
+    await new Promise((r) => setTimeout(r, 1500));
+  }
+
+  if (!result.paid) {
+    location.replace(status === "processing" ? PENDING_URL : CHECKOUT_URL + "?payment=failed");
+  } else if (!result.cardSaved) {
+    location.replace(FINANCING_OFFER_URL);
+  } else {
+    hideLoader();
+    const key = "offerStart_" + orderId;
+    // private browsing can block storage; the offer must still appear
+    let start = 0;
+    try { start = Number(localStorage.getItem(key)); } catch (e) {}
+    if (!start) {
+      start = Date.now();
+      try { localStorage.setItem(key, String(start)); } catch (e) {}
+    }
+    const wait = Math.max(0, DELAY_MS - (Date.now() - start));
+    setTimeout(() => { document.querySelector("#offer").style.display = "block"; }, wait);
+  }
+
+  const yes = document.querySelector("#yes");
+  const msg = document.querySelector("#msg");
+  yes.addEventListener("click", async () => {
+    msg.textContent = "";
+    yes.disabled = true;
+    showLoader("Adding your upgrade. Please don't close or refresh this page.");
+    try {
+      const res = await fetch(`${SERVER}/upsell.php`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ orderId }),
+      });
+      const data = await res.json();
+      if (data.ok) { location.assign(THANK_YOU_URL); return; }
+      msg.textContent = data.error || "Couldn't process the upgrade. Please try again.";
+    } catch (e) {
+      console.error(e);
+      msg.textContent = "Something went wrong. Please try again.";
+    }
+    hideLoader();
+    yes.disabled = false;
+  });
+</script>

@@ -4,7 +4,7 @@ Downloaded 2026-10-16 from the client's Drive headshots folder (link in the loca
 
 | File | Who | Outfit / pose | Notes |
 |---|---|---|---|
-| `daniels-7747.jpg` | PD solo | Navy denim, seated, hands clasped, direct gaze | Most authoritative. Good for the RI hero and "About". |
+| `daniels-7747.jpg` | PD solo | Navy denim, seated, hands clasped, direct gaze | ⛔ **DO NOT USE.** Dr. Daniels doesn't like this photo (client feedback, 2026-11-03). Same for every crop or cutout made from it (`pd-7747*`). If it appears on any page, flag it as a top-priority fix. |
 | `daniels-7755.jpg` | PD solo | Navy denim, seated, leaning in, relaxed | Approachable teacher. |
 | `daniels-7792.jpg` | PD solo | Navy denim, standing, laughing, hands together | Warm and joyful. |
 | `daniels-7800.jpg` | PD solo | Navy denim, standing, smile, hands together | Friendly. Good for the thank-you page. |

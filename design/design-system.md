@@ -60,7 +60,8 @@ Last updated: 2026-10-16. The base is measured from the live Couples OS Summit f
 ## 2. Photography
 
 PD solo shots for RI (warm tan studio backdrop; all need **background removal** to sit on navy the way the Couples OS cutouts do):
-- Navy denim jacket set: `daniels-7747` (seated, hands clasped; authoritative), `daniels-7755` (seated, relaxed), `daniels-7800` (standing, warm smile), `daniels-7792` (standing, laughing, hands together).
+- ⛔ **Never use `daniels-7747`** (seated, hands clasped between the knees, straight face) or anything made from it (`pd-7747*.jpg/.webp`). Dr. Daniels doesn't like this photo (client feedback, 2026-11-03). If it shows up on any page, flag it as a top-priority fix.
+- Navy denim jacket set: `daniels-7755` (seated, relaxed), `daniels-7800` (standing, warm smile), `daniels-7792` (standing, laughing, hands together).
 - Tan jacket set: `daniels-7996` (standing, confident), `daniels-7998` (looking up, joyful).
 
 Index: [assets/headshots/README.md](../assets/headshots/README.md).
